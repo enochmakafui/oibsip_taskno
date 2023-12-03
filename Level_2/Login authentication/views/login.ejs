@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login-Page</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Login </h1>
+        <p>Hi,welcome back 👋🏾</p>
+        <form action="/login" method="post">
+            <label for="email">Email</label> 
+            <input type="email" placeholder="johndoe@gmail.com" name="username"> 
+            <label for="password">Password</label> 
+            <input type="password" placeholder="Enter your password" name="password"> 
+            <p class="invalid"><%= locals.error;  %></p>
+
+            <button type="submit">Login</button>
+
+        </form>
+        <p class="options">Not Registered? <a href="/register">Create an Account</a></p>
+    </div>
+</body>
+</html>
