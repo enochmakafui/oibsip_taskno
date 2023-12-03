@@ -1,0 +1,147 @@
+
+
+:root{
+    --bg-color:#190482;
+    --color:#E0F4FF;
+    --button-bg:#7752FE;
+}
+
+html{
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: var(--color);
+    height: 100%;
+}
+
+.app{
+    background-color: var(--bg-color);
+    margin: 1rem;
+    border-radius: 10px;
+    height:100%;
+    display: flex;
+    flex-flow:column nowrap;
+   padding:2rem 1rem 1rem 2rem;
+
+    text-align: center;
+    
+
+}
+.app .head-text{
+    margin-bottom: 3rem;
+}
+form{
+    display: flex;
+    flex-flow: column nowrap;
+    gap:3rem;
+    width: 100%;
+}
+
+.app .input-group,
+.app .result-group{
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap:2rem;
+    align-items: center;
+    width: 100%;
+}
+
+.app input{
+    border:none;
+    outline:none;
+    font-size: 2rem;
+    border-bottom:2px solid var(--color);
+    width: 80%;
+    background-color: var(--bg-color);
+    color:var(--color)
+
+}
+
+.input-group select,
+.result-group select{
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    border-bottom: 2px solid var(--color);
+   margin-top: 1.5rem;
+   background-color: var(--bg-color);
+   color: var(--color);
+
+}
+
+
+.app .result-group #result{
+    width: 80%;
+    font-size: 1.5rem;
+    border-bottom:2px solid var(--color);
+    background-color: var(--bg-color);
+    color:var(--color)
+}
+.result-group select{
+    margin-top: 4.2rem;
+}
+
+
+.app button{
+    border:none;
+    outline:none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: var(--button-bg);
+    color:white;
+    cursor: pointer;
+    width: 80%;
+    margin-top: 2rem;
+    margin: 2rem auto;
+}
+
+
+[data-state="incorrect"]{
+ animation: shake 0.5s ease-in-out both;
+}
+
+
+
+@keyframes shake {
+    10%,
+    30%,
+    50%,
+    70%,
+    90%{
+        transform: translateX(-10%)
+    }
+
+
+
+    20%,
+    40%,
+    60%,
+    80%{
+        transform: translateX(10%)
+    }
+
+    100%{
+        transform: translateX(0)
+    }
+
+}
+/* Larger Screens */
+
+@media(min-width:736px){
+    body{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+    }
+}
